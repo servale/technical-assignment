@@ -1,4 +1,12 @@
-All requested resources are in main.tf
+0. STRUCTURE
+- All requested resources are in main.tf
+- Ideally resources would be placed in separate files designeted for each type (extrapolating to SaaS example):
+  * infra-compute.tf: VMs+NIC+PIP
+  * infra-data.tf: databases, storage accounts, blob containers
+  * infra-monitoring.tf: log analytics workspaces
+  * infra-network.tf: Vnets, Subnets
+  * infra-security.tf: firewalls, NSGs, role assignments, key vaults
+
 
 •	How this would be deployed via CI/CD
 1. BACKEND
